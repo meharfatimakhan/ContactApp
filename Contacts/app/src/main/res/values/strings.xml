@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="messageWithLink">Don\'t have an account?<a href="https://www.google.com/">Sign Up</a></string>
+</resources>
