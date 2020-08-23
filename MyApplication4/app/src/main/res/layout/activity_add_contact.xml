@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication4.AddContact">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactimg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/ic_person_black_24dp"
+            android:layout_marginTop="110dp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linlayout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/contactimg"
+        app:layout_constraintStart_toEndOf="@id/contactimg"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/lin1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/firstNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="First Name"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/firstNameEdt"
+                android:layout_gravity="center"
+                android:hint="First Name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp">
+
+            </EditText>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lin1">
+
+            <TextView
+                android:id="@+id/lastNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/lastNameEdt"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="Last Name"
+                android:textSize="16sp">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Number"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:textSize="16sp"
+            android:textColor="@color/cardview_dark_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactNumTxt"
+            app:layout_constraintTop_toBottomOf="@id/lin2"
+            app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+
+        <LinearLayout
+
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical"
+            android:id="@+id/linearlayout"
+            app:layout_constraintTop_toBottomOf="@id/lin2"
+            app:layout_constraintLeft_toRightOf="@id/contactNumTxt"
+            app:layout_constraintStart_toEndOf="@id/contactNumTxt"
+            >
+
+            <EditText
+                android:textSize="16sp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="03xxxxxxxxx"
+                android:id="@+id/contactNumEdt">
+
+            </EditText>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="+"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintLeft_toRightOf="@+id/linearlayout"
+            app:layout_constraintTop_toBottomOf="@id/lin2"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/lin3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearlayout">
+
+            <TextView
+                android:id="@+id/emailTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="16sp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/emailEdt"
+                android:layout_width="200dp"
+                android:inputType="textEmailAddress"
+                android:hint="email@gmail.com"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:textSize="16sp">
+
+            </EditText>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/addimgBtn"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linlayout"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/round_button"
+        android:text="Upload Image">
+    </Button>
+
+        <Button
+            android:id="@+id/savbtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addimgBtn"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/round_button"
+            android:text="Save Contact">
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
